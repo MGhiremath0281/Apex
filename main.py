@@ -1,34 +1,54 @@
 from ultralytics import YOLO
 import cv2
-from pathlib import Path
+import time
 
 def main():
-    # Load pre-trained YOLOv8n model
+    # Load YOLO model
     model = YOLO('yolov8n.pt')
-    
-    # Your image path
-    image_path = r'C:\Users\adity\Desktop\OBJDETECT\data\test1.jpg'
 
-    # Run prediction
-    results = model(image_path, save=True)
+    # Path to your video file (or 0 for webcam)
+    video_path = r'C:\Users\adity\Desktop\OBJDETECT\data\human-_dAta2.mp4'
+    cap = cv2.VideoCapture(video_path)
 
-    # Print readable class names and confidence scores
-    print("Detected objects:")
-    for box in results[0].boxes:
-        class_id = int(box.cls)
-        class_name = results[0].names[class_id]
-        confidence = float(box.conf)
-        print(f" - {class_name} ({confidence:.2f})")
+    if not cap.isOpened():
+        print("Error: Could not open video.")
+        return
 
-    print(f"\nTotal objects detected: {len(results[0].boxes)}")
+    # For FPS calculation
+    prev_time = 0
 
-    # Corrected saved_path construction
-    saved_path = Path(results[0].save_dir) / Path(results[0].path).name
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break  # end of video
 
-    # Show the image using OpenCV
-    img = cv2.imread(str(saved_path))
-    cv2.imshow("Detection Result", img)
-    cv2.waitKey(0)
+        # Run inference
+        results = model.predict(frame, verbose=False)
+
+        # Use YOLO's built-in plot function (draws boxes & labels)
+        annotated_frame = results[0].plot()
+
+        # Calculate FPS
+        curr_time = time.time()
+        fps = 1 / (curr_time - prev_time) if prev_time != 0 else 0
+        prev_time = curr_time
+
+        # Get number of detections
+        num_objects = len(results[0].boxes)
+
+        # Add custom overlay text
+        cv2.putText(annotated_frame, "Apex Object Detection", (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(annotated_frame, f"Objects: {num_objects}", (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2, cv2.LINE_AA)
+        cv2.putText(annotated_frame, f"FPS: {fps:.1f}", (20, 110), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 0), 2, cv2.LINE_AA)
+
+        # Show frame
+        cv2.imshow("Cool YOLO Video", annotated_frame)
+
+        # Press 'q' to stop
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
