@@ -4,10 +4,10 @@ import time
 
 def main():
     # Load YOLO model
-    model = YOLO('yolov8n.pt')
+    model = YOLO('yolov8l.pt')
 
     # Path to your video file (or 0 for webcam)
-    video_path = r'C:\Users\adity\Desktop\OBJDETECT\data\human-_dAta2.mp4'
+    video_path = r'C:\Users\adity\Desktop\OBJDETECT\data\marathon_data2.mp4'
     cap = cv2.VideoCapture(video_path)
 
     if not cap.isOpened():
