@@ -12,9 +12,9 @@ YOLO_MODEL_PATH = r'c:\Users\adity\Desktop\OBJDETECT\yolov8x.pt'
 # Camera source (0 for default webcam, or path to video file, or IP camera stream URL)
 CAMERA_SOURCE = 0 
 
-# Bird class ID (IMPORTANT: This MUST match the index of 'bird' in your model's class names)
-BIRD_CLASS_NAME = 'bird' # We'll find the ID dynamically
-BIRD_CLASS_ID = -1 # Initialize, will be set after model loads
+# Bird class name (make sure this matches your model's training)
+BIRD_CLASS_NAME = 'bird' 
+BIRD_CLASS_ID = -1 # Will be set after model loads
 
 # Tracking parameters (DeepSORT specific, adjust as needed)
 MAX_TRACKING_AGE = 30 
@@ -25,13 +25,26 @@ CRITICAL_PROXIMITY_THRESHOLD_METERS = 50
 WARNING_PROXIMITY_THRESHOLD_METERS = 150 
 COLLISION_TTC_THRESHOLD_SECONDS = 3     
 
+# Region of Interest (ROI) for testing
+# Define your ROI coordinates (x1, y1, x2, y2)
+# These are example coordinates, adjust them based on your camera view.
+# Example: Top-left quarter of a 640x480 frame
+ROI_X1 = 100
+ROI_Y1 = 100
+ROI_X2 = 500
+ROI_Y2 = 300
+ROI_COLOR = (0, 255, 255) # Yellow
+ROI_THICKNESS = 2
+
 # On-screen alert display settings
 ALERT_DISPLAY_DURATION_SECONDS = 2 
 ALERT_TEXT_FONT = cv2.FONT_HERSHEY_SIMPLEX
 ALERT_TEXT_SCALE = 1.5
 ALERT_TEXT_THICKNESS = 3
 ALERT_TEXT_COLOR = (255, 255, 255) # White
-ALERT_BACKGROUND_COLOR = (0, 0, 255) # Red
+ALERT_BACKGROUND_COLOR_CRITICAL = (0, 0, 255) # Red for collision
+ALERT_BACKGROUND_COLOR_WARNING = (0, 165, 255) # Orange for warning
+ALERT_BACKGROUND_COLOR_ROI = (255, 0, 0) # Blue for ROI violation
 
 # --- Main Detection and Tracking Logic ---
 
@@ -41,23 +54,22 @@ def run_bird_avoidance_system():
         model = YOLO(YOLO_MODEL_PATH)
         print(f"YOLOv8 model loaded from {YOLO_MODEL_PATH}")
 
-        # Dynamically find the bird class ID - FIX APPLIED HERE
+        # Dynamically find the bird class ID
         global BIRD_CLASS_ID
         found_bird_id = -1
         for class_id, class_name in model.names.items():
-            # Make comparison robust: strip whitespace and convert to lowercase
             if class_name.strip().lower() == BIRD_CLASS_NAME.lower():
                 found_bird_id = class_id
-                break # Found it, no need to continue searching
+                break
         
         if found_bird_id != -1:
             BIRD_CLASS_ID = found_bird_id
             print(f"Found '{BIRD_CLASS_NAME}' class with ID: {BIRD_CLASS_ID}")
         else:
             print(f"Error: '{BIRD_CLASS_NAME}' not found in model's class names. "
-                  "This might be due to a typo in BIRD_CLASS_NAME or a non-standard model.")
+                  "Please check BIRD_CLASS_NAME or your model's training classes.")
             print(f"Available classes: {model.names}")
-            return # Exit if bird class not found
+            return 
 
     except Exception as e:
         print(f"Error loading YOLO model: {e}. Please check path and file.")
@@ -70,7 +82,7 @@ def run_bird_avoidance_system():
               "Check if camera is connected, in use by another app, or if IP stream URL is correct.")
         return
 
-    # --- Initialize Tracking (e.g., DeepSORT) ---
+    # --- Initialize Tracking (e.g., Simple Centroid Tracking) ---
     tracks = {} 
     next_track_id = 0
     frame_count = 0
@@ -81,6 +93,7 @@ def run_bird_avoidance_system():
 
     current_alert_message = "" 
     alert_display_start_time = 0 
+    alert_background_color = (0,0,0) # Default transparent/black
 
     while True:
         ret, frame = cap.read()
@@ -91,8 +104,11 @@ def run_bird_avoidance_system():
         frame_count += 1
         fps_frame_count += 1
 
-        # YOLOv8 Inference
-        # Use the dynamically found BIRD_CLASS_ID for filtering detections
+        # Draw ROI on the frame
+        cv2.rectangle(frame, (ROI_X1, ROI_Y1), (ROI_X2, ROI_Y2), ROI_COLOR, ROI_THICKNESS)
+        cv2.putText(frame, 'ROI', (ROI_X1, ROI_Y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, ROI_COLOR, 2)
+
+        # YOLOv8 Inference - only detect the bird class
         results = model(frame, verbose=False, conf=0.5, classes=BIRD_CLASS_ID) 
 
         detections = []
@@ -102,12 +118,10 @@ def run_bird_avoidance_system():
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
                 conf = float(box.conf[0])
                 cls = int(box.cls[0])
-                # This check should now be redundant if 'classes=BIRD_CLASS_ID' works as intended,
-                # but it adds an extra layer of safety.
                 if cls == BIRD_CLASS_ID: 
                     detections.append({'bbox': [x1, y1, x2, y2], 'conf': conf})
 
-        # --- Simple Centroid Tracking (Replace with DeepSORT for production) ---
+        # --- Simple Centroid Tracking ---
         new_tracks = {}
         matched_detections = [False] * len(detections)
 
@@ -166,6 +180,7 @@ def run_bird_avoidance_system():
         # --- Collision Prediction & Avoidance Logic ---
         collision_imminent = False
         warning_active = False
+        bird_in_roi = False # New flag for ROI detection
 
         for track_id, track_info in tracks.items():
             x1, y1, x2, y2 = track_info['bbox']
@@ -175,6 +190,7 @@ def run_bird_avoidance_system():
             bird_height_pixels = y2 - y1
             estimated_distance_meters = (1000 / (bird_height_pixels + 1)) 
 
+            # Check for Proximity Alerts
             if estimated_distance_meters < CRITICAL_PROXIMITY_THRESHOLD_METERS:
                 collision_imminent = True
             elif estimated_distance_meters < WARNING_PROXIMITY_THRESHOLD_METERS:
@@ -192,8 +208,20 @@ def run_bird_avoidance_system():
                     if ttc > 0 and ttc < COLLISION_TTC_THRESHOLD_SECONDS * cap.get(cv2.CAP_PROP_FPS): 
                         collision_imminent = True
 
+            # --- Check if bird is within ROI ---
+            # Check for overlap between bird's bounding box and ROI
+            if (x1 < ROI_X2 and x2 > ROI_X1 and
+                y1 < ROI_Y2 and y2 > ROI_Y1):
+                bird_in_roi = True
+                cv2.rectangle(frame, (x1, y1), (x2, y2), ALERT_BACKGROUND_COLOR_ROI, 2) # Highlight bird in ROI
+                cv2.putText(frame, 'IN ROI', (x1, y1 + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, ALERT_BACKGROUND_COLOR_ROI, 2)
+
+
             # --- Visualization of Bird Detections ---
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            # Only draw green bounding box if not in ROI (ROI highlights override)
+            if not bird_in_roi:
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            
             cv2.putText(frame, f'Bird {track_id} ({int(estimated_distance_meters)}m)', (x1, y1 - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
             cv2.circle(frame, (centroid_x, centroid_y), 5, (0, 0, 255), -1)
@@ -205,21 +233,31 @@ def run_bird_avoidance_system():
             for i in range(1, len(track_info['history'])):
                 cv2.line(frame, track_info['history'][i-1], track_info['history'][i], (0, 255, 255), 1)
 
-        # --- On-Screen Alert Logic ---
+        # --- On-Screen Alert Logic (Hierarchy: ROI > Critical > Warning) ---
         new_alert_set = False
-        if collision_imminent:
-            if current_alert_message != "CRITICAL: COLLISION IMMINENT!":
-                current_alert_message = "CRITICAL: COLLISION IMMINENT!"
-                alert_display_start_time = time.time()
-                new_alert_set = True
-        elif warning_active and not collision_imminent: 
-            if current_alert_message != "WARNING: Bird detected close!":
-                current_alert_message = "WARNING: Bird detected close!"
-                alert_display_start_time = time.time()
-                new_alert_set = True
+        temp_alert_message = ""
+        temp_alert_color = (0,0,0)
+
+        if bird_in_roi:
+            temp_alert_message = "BIRD IN RESTRICTED AREA!"
+            temp_alert_color = ALERT_BACKGROUND_COLOR_ROI # Blue background for ROI
+        elif collision_imminent:
+            temp_alert_message = "CRITICAL: COLLISION IMMINENT!"
+            temp_alert_color = ALERT_BACKGROUND_COLOR_CRITICAL # Red background
+        elif warning_active:
+            temp_alert_message = "WARNING: Bird detected close!"
+            temp_alert_color = ALERT_BACKGROUND_COLOR_WARNING # Orange background
         
-        if current_alert_message and (time.time() - alert_display_start_time >= ALERT_DISPLAY_DURATION_SECONDS) and not (collision_imminent or warning_active):
-            current_alert_message = "" 
+        # Update current alert if a higher priority alert is active or existing alert is timed out
+        if temp_alert_message != current_alert_message: # New alert or different alert
+            current_alert_message = temp_alert_message
+            alert_background_color = temp_alert_color
+            alert_display_start_time = time.time()
+        elif current_alert_message and (time.time() - alert_display_start_time >= ALERT_DISPLAY_DURATION_SECONDS):
+            # If current alert timed out and no new alert is active, clear it
+            if not (bird_in_roi or collision_imminent or warning_active):
+                current_alert_message = ""
+                alert_background_color = (0,0,0) # Reset color
 
         # Display alert message if active
         if current_alert_message:
@@ -229,7 +267,7 @@ def run_bird_avoidance_system():
 
             cv2.rectangle(frame, (text_x - 10, text_y - text_size[1] - 10), 
                           (text_x + text_size[0] + 10, text_y + 10), 
-                          ALERT_BACKGROUND_COLOR, -1) 
+                          alert_background_color, -1) 
 
             cv2.putText(frame, current_alert_message, (text_x, text_y), 
                         ALERT_TEXT_FONT, ALERT_TEXT_SCALE, ALERT_TEXT_COLOR, ALERT_TEXT_THICKNESS) 
@@ -242,7 +280,7 @@ def run_bird_avoidance_system():
         cv2.putText(frame, f'FPS: {fps:.2f}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
         # Display frame
-        cv2.imshow('Bird Detection & Tracking', frame)
+        cv2.imshow('Bird Detection & Tracking (Test Mode)', frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -252,9 +290,10 @@ def run_bird_avoidance_system():
     cv2.destroyAllWindows()
 
 if __name__ == '__main__':
-    print("--- Bird Avoidance System Initializing ---")
+    print("--- Bird Avoidance System (Test Mode) Initializing ---")
     print("Ensure your camera source and model path are correctly configured.")
-    print("All alerts will be displayed on screen.")
+    print("ROI: [X1, Y1, X2, Y2] = [", ROI_X1, ", ", ROI_Y1, ", ", ROI_X2, ", ", ROI_Y2, "]")
+    print("Alerts will be displayed on screen.")
     print("Press 'q' to quit the display window.")
     run_bird_avoidance_system()
     print("--- System Shut Down ---")
