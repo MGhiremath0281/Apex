@@ -12,7 +12,7 @@ YOLO_MODEL_PATH = r'c:\Users\adity\Desktop\OBJDETECT\yolov8x.pt'
 # Video source: Provide the full path to your video file
 # IMPORTANT: Replace 'path/to/your/video.mp4' with the actual path to your video.
 # Example: VIDEO_PATH = r'c:\Users\adity\Desktop\OBJDETECT\my_bird_video.mp4'
-VIDEO_PATH = r'c:\Users\adity\Desktop\OBJDETECT\data\birds.mp4' # <--- CHANGE THIS TO YOUR VIDEO FILE PATH
+VIDEO_PATH = r'c:\Users\adity\Desktop\OBJDETECT\data\birds2.mp4' # <--- CHANGE THIS TO YOUR VIDEO FILE PATH
 
 CAMERA_SOURCE = VIDEO_PATH # Set camera source to the video file
 
