@@ -7,7 +7,7 @@ import threading
 
 # --- Configuration ---
 # Path to your trained YOLOv8 bird detection model
-YOLO_MODEL_PATH = r'c:\Users\adity\Desktop\OBJDETECT\yolov8x.pt' 
+YOLO_MODEL_PATH = r'c:\Users\adity\Desktop\OBJDETECT\yolo11n.pt' 
 
 # Video source: Provide the full path to your video file
 # IMPORTANT: Replace 'path/to/your/video.mp4' with the actual path to your video.

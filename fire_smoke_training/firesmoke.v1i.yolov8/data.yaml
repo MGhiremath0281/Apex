@@ -1,0 +1,6 @@
+train: C:/Users/adity/Desktop/OBJDETECT/fire_smoke_training/firesmoke.v1i.yolov8/train/images
+val: C:/Users/adity/Desktop/OBJDETECT/fire_smoke_training/firesmoke.v1i.yolov8/valid/images
+test: C:/Users/adity/Desktop/OBJDETECT/fire_smoke_training/firesmoke.v1i.yolov8/test/images
+
+nc: 5
+names: ['fire', 'smoke', 'neutral', 'person', 'vehicle']
