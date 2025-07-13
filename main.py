@@ -7,7 +7,7 @@ def main():
     model = YOLO('yolov8x.pt')
 
     # Path to your video file (or 0 for webcam)
-    video_path = r'C:\Users\adity\Desktop\OBJDETECT\data\notclear.mp4'
+    video_path = r'C:\Users\adity\Desktop\OBJDETECT\data\landing_notclearr.mp4'
     cap = cv2.VideoCapture(video_path)
 
     if not cap.isOpened():
