@@ -1,0 +1,8 @@
+--- Detection Log Started: 2025-07-14 11:49:31 ---
+Video Source: c:\Users\adity\Desktop\OBJDETECT\data\firedata2.mp4
+Base Model: yolov8x.pt
+Fire Model: yolofirenew.pt
+--------------------------------------------------
+[2025-07-14 11:49:31.669 | Frame 0] Base YOLO model loaded: yolov8x.pt
+[2025-07-14 11:49:31.669 | Frame 0] YOLOfire model loaded: yolofirenew.pt
+[2025-07-14 11:49:31.671 | Frame 0] ERROR: 'Fire' not found in YOLOfire model classes. Available: {0: 'Fire'}
