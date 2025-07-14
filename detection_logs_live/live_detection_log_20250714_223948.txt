@@ -1,0 +1,26 @@
+--- Live Detection Log Started: 2025-07-14 22:39:48 ---
+Camera Source: 0
+Base Model: yolov8x.pt
+Fire Model: yolofirenew.pt
+------------------------------------------------------------
+[2025-07-14 22:39:51.582 | Frame 0] Live detection started.
+[2025-07-14 22:39:54.301 | Frame 1] Detected: person 0.93 at (29, 170, 539, 479)
+[2025-07-14 22:39:54.301 | Frame 1] Alert Triggered: ALERT: HUMAN DETECTED!
+[2025-07-14 22:39:54.983 | Frame 2] Detected: person 0.91 at (32, 174, 537, 479)
+[2025-07-14 22:39:55.570 | Frame 3] Detected: person 0.77 at (33, 172, 541, 479)
+[2025-07-14 22:39:56.194 | Frame 4] Detected: person 0.85 at (142, 174, 537, 479)
+[2025-07-14 22:39:56.798 | Frame 5] Detected: person 0.81 at (33, 175, 540, 479)
+[2025-07-14 22:39:57.401 | Frame 6] Detected: person 0.92 at (26, 171, 539, 479)
+[2025-07-14 22:39:58.000 | Frame 7] Detected: person 0.93 at (30, 160, 535, 479)
+[2025-07-14 22:39:58.619 | Frame 8] Detected: person 0.95 at (29, 121, 514, 479)
+[2025-07-14 22:39:59.225 | Frame 9] Detected: person 0.95 at (29, 107, 540, 479)
+[2025-07-14 22:39:59.870 | Frame 10] Detected: person 0.95 at (28, 111, 553, 479)
+[2025-07-14 22:40:00.506 | Frame 11] Detected: person 0.95 at (29, 112, 557, 479)
+[2025-07-14 22:40:01.108 | Frame 12] Detected: person 0.95 at (24, 107, 547, 479)
+[2025-07-14 22:40:01.714 | Frame 13] Detected: person 0.95 at (27, 104, 541, 479)
+[2025-07-14 22:40:02.317 | Frame 14] Detected: person 0.95 at (27, 105, 537, 479)
+[2025-07-14 22:40:02.934 | Frame 15] Detected: person 0.95 at (24, 105, 544, 479)
+[2025-07-14 22:40:03.541 | Frame 16] Detected: person 0.94 at (25, 103, 544, 479)
+[2025-07-14 22:40:04.141 | Frame 17] Detected: person 0.96 at (0, 104, 542, 479)
+[2025-07-14 22:40:04.747 | Frame 18] Detected: person 0.95 at (2, 104, 549, 479)
+[2025-07-14 22:40:05.427 | Frame 19] Detected: person 0.95 at (16, 104, 546, 479)
