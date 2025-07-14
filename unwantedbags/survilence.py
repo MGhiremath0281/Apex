@@ -191,8 +191,10 @@ class PersonBagTracker:
 
     def check_unattended_bags(self):
         for bag_id in self.active_bags:
-            # Unattended if not mapped to a person (or mapped to itself)
-            if self.bag_id_mapping.get(bag_id, bag_id) == bag_id:
+            associated_person_id = self.bag_id_mapping.get(bag_id, bag_id)
+            # If bag is not mapped to a person (or mapped to itself)
+            if associated_person_id == bag_id:
+                # Standard unattended bag logic
                 if bag_id not in self.unattended_bags:
                     self.unattended_bags[bag_id] = self.frame_count
                     logger.info(f"Bag {bag_id} detected as potentially unattended (no active association).")
@@ -202,11 +204,23 @@ class PersonBagTracker:
                     self.trigger_alert(bag_id, owner_id_for_alert)
                     self.alerts_logged.add(bag_id)
             else:
-                if bag_id in self.unattended_bags:
-                    del self.unattended_bags[bag_id]
-                    logger.info(f"Bag {bag_id} is no longer unattended.")
-                if bag_id in self.alerts_logged:
-                    self.alerts_logged.remove(bag_id)
+                # Bag is associated with a person, but check if the person is still present
+                if associated_person_id not in self.active_persons:
+                    # The owner has left the scene!
+                    if bag_id not in self.unattended_bags:
+                        self.unattended_bags[bag_id] = self.frame_count
+                        logger.info(f"Bag {bag_id} is now unattended because owner {associated_person_id} left the scene.")
+                    frames_unattended = self.frame_count - self.unattended_bags[bag_id]
+                    if frames_unattended >= self.alert_threshold and bag_id not in self.alerts_logged:
+                        self.trigger_alert(bag_id, associated_person_id)
+                        self.alerts_logged.add(bag_id)
+                else:
+                    # Bag is attended
+                    if bag_id in self.unattended_bags:
+                        del self.unattended_bags[bag_id]
+                        logger.info(f"Bag {bag_id} is no longer unattended.")
+                    if bag_id in self.alerts_logged:
+                        self.alerts_logged.remove(bag_id)
         # Clean up for bags that left the frame
         for bag_id in list(self.unattended_bags.keys()):
             if bag_id not in self.active_bags:
