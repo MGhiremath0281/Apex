@@ -1,0 +1,77 @@
+{
+  "assets": {
+    "wrench": {
+      "id": "TOOL_001",
+      "type": "tool",
+      "workstation": "station_1"
+    },
+    "hammer": {
+      "id": "TOOL_002",
+      "type": "tool",
+      "workstation": "station_2"
+    },
+    "screwdriver": {
+      "id": "TOOL_003",
+      "type": "tool",
+      "workstation": "station_1"
+    },
+    "drill": {
+      "id": "TOOL_004",
+      "type": "tool",
+      "workstation": "station_3"
+    },
+    "pliers": {
+      "id": "TOOL_005",
+      "type": "tool",
+      "workstation": "station_2"
+    }
+  },
+  "workstations": {
+    "station_1": {
+      "area": [
+        50,
+        50,
+        300,
+        200
+      ],
+      "name": "Assembly Station"
+    },
+    "station_2": {
+      "area": [
+        350,
+        50,
+        600,
+        200
+      ],
+      "name": "Repair Station"
+    },
+    "station_3": {
+      "area": [
+        650,
+        50,
+        900,
+        200
+      ],
+      "name": "Quality Control"
+    }
+  },
+  "allowed_locations": {
+    "TOOL_001": [
+      "station_1",
+      "station_2"
+    ],
+    "TOOL_002": [
+      "station_2",
+      "station_3"
+    ],
+    "TOOL_003": [
+      "station_1"
+    ],
+    "TOOL_004": [
+      "station_3"
+    ],
+    "TOOL_005": [
+      "station_2"
+    ]
+  }
+}
