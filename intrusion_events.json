@@ -1,0 +1,394 @@
+[
+    {
+        "id": 1,
+        "timestamp": "2025-07-15T17:43:08.871957",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,191)-(448,480) with confidence 0.87",
+        "image_path": "intrusion_20250715_174308.jpg"
+    },
+    {
+        "id": 2,
+        "timestamp": "2025-07-15T17:43:08.976103",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,192)-(448,479) with confidence 0.87",
+        "image_path": "intrusion_20250715_174308.jpg"
+    },
+    {
+        "id": 3,
+        "timestamp": "2025-07-15T17:43:09.063138",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (80,191)-(447,479) with confidence 0.83",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 4,
+        "timestamp": "2025-07-15T17:43:09.137115",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,192)-(447,479) with confidence 0.85",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 5,
+        "timestamp": "2025-07-15T17:43:09.205856",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,192)-(448,480) with confidence 0.87",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 6,
+        "timestamp": "2025-07-15T17:43:09.276361",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,192)-(448,480) with confidence 0.87",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 7,
+        "timestamp": "2025-07-15T17:43:09.340556",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,192)-(448,480) with confidence 0.86",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 8,
+        "timestamp": "2025-07-15T17:43:09.414746",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,192)-(448,479) with confidence 0.87",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 9,
+        "timestamp": "2025-07-15T17:43:09.496116",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,192)-(448,479) with confidence 0.87",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 10,
+        "timestamp": "2025-07-15T17:43:09.571516",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (82,192)-(449,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 11,
+        "timestamp": "2025-07-15T17:43:09.650644",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (87,192)-(447,479) with confidence 0.86",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 12,
+        "timestamp": "2025-07-15T17:43:09.729265",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (87,192)-(447,479) with confidence 0.86",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 13,
+        "timestamp": "2025-07-15T17:43:09.807978",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (85,191)-(448,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 14,
+        "timestamp": "2025-07-15T17:43:09.889179",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,190)-(448,479) with confidence 0.81",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 15,
+        "timestamp": "2025-07-15T17:43:09.971270",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,190)-(448,479) with confidence 0.84",
+        "image_path": "intrusion_20250715_174309.jpg"
+    },
+    {
+        "id": 16,
+        "timestamp": "2025-07-15T17:43:10.061341",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,190)-(448,479) with confidence 0.84",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 17,
+        "timestamp": "2025-07-15T17:43:10.135677",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,189)-(447,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 18,
+        "timestamp": "2025-07-15T17:43:10.211911",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,190)-(448,479) with confidence 0.85",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 19,
+        "timestamp": "2025-07-15T17:43:10.289532",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,190)-(449,479) with confidence 0.86",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 20,
+        "timestamp": "2025-07-15T17:43:10.368374",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,190)-(449,479) with confidence 0.86",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 21,
+        "timestamp": "2025-07-15T17:43:10.444341",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (58,189)-(449,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 22,
+        "timestamp": "2025-07-15T17:43:10.508551",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (73,188)-(447,479) with confidence 0.79",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 23,
+        "timestamp": "2025-07-15T17:43:10.582466",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (73,188)-(447,479) with confidence 0.79",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 24,
+        "timestamp": "2025-07-15T17:43:10.661771",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (75,189)-(447,479) with confidence 0.81",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 25,
+        "timestamp": "2025-07-15T17:43:10.728081",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,189)-(448,480) with confidence 0.84",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 26,
+        "timestamp": "2025-07-15T17:43:10.799729",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,188)-(448,480) with confidence 0.86",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 27,
+        "timestamp": "2025-07-15T17:43:10.880346",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,188)-(448,480) with confidence 0.86",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 28,
+        "timestamp": "2025-07-15T17:43:10.969697",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,189)-(448,479) with confidence 0.83",
+        "image_path": "intrusion_20250715_174310.jpg"
+    },
+    {
+        "id": 29,
+        "timestamp": "2025-07-15T17:43:11.041902",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (82,188)-(449,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 30,
+        "timestamp": "2025-07-15T17:43:11.113908",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (82,188)-(449,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 31,
+        "timestamp": "2025-07-15T17:43:11.195004",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (87,189)-(449,480) with confidence 0.81",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 32,
+        "timestamp": "2025-07-15T17:43:11.273277",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,189)-(449,479) with confidence 0.79",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 33,
+        "timestamp": "2025-07-15T17:43:11.350275",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (79,188)-(446,479) with confidence 0.77; Person detected at (85,188)-(626,479) with confidence 0.57",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 34,
+        "timestamp": "2025-07-15T17:43:11.430800",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (79,188)-(446,479) with confidence 0.77; Person detected at (85,188)-(626,479) with confidence 0.57",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 35,
+        "timestamp": "2025-07-15T17:43:11.505106",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (78,187)-(447,479) with confidence 0.81",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 36,
+        "timestamp": "2025-07-15T17:43:11.581811",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (87,188)-(449,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 37,
+        "timestamp": "2025-07-15T17:43:11.661363",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (87,188)-(449,479) with confidence 0.82",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 38,
+        "timestamp": "2025-07-15T17:43:11.737772",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,188)-(449,480) with confidence 0.83",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 39,
+        "timestamp": "2025-07-15T17:43:11.818286",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (87,189)-(447,479) with confidence 0.78",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 40,
+        "timestamp": "2025-07-15T17:43:11.895114",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (93,189)-(447,479) with confidence 0.8",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 41,
+        "timestamp": "2025-07-15T17:43:11.975427",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (93,189)-(447,479) with confidence 0.8",
+        "image_path": "intrusion_20250715_174311.jpg"
+    },
+    {
+        "id": 42,
+        "timestamp": "2025-07-15T17:43:12.055657",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,189)-(447,479) with confidence 0.87",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 43,
+        "timestamp": "2025-07-15T17:43:12.127256",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (91,190)-(448,479) with confidence 0.89",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 44,
+        "timestamp": "2025-07-15T17:43:12.207105",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (91,190)-(448,479) with confidence 0.89",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 45,
+        "timestamp": "2025-07-15T17:43:12.292333",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (87,189)-(615,479) with confidence 0.83",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 46,
+        "timestamp": "2025-07-15T17:43:12.390753",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,188)-(465,479) with confidence 0.79",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 47,
+        "timestamp": "2025-07-15T17:43:12.458776",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,188)-(472,479) with confidence 0.87",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 48,
+        "timestamp": "2025-07-15T17:43:12.537413",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (91,189)-(450,479) with confidence 0.79",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 49,
+        "timestamp": "2025-07-15T17:43:12.614208",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (91,189)-(450,479) with confidence 0.79",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 50,
+        "timestamp": "2025-07-15T17:43:12.694441",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (91,189)-(485,479) with confidence 0.85",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 51,
+        "timestamp": "2025-07-15T17:43:12.770989",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,189)-(485,479) with confidence 0.86",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 52,
+        "timestamp": "2025-07-15T17:43:12.853484",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,189)-(485,479) with confidence 0.86",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 53,
+        "timestamp": "2025-07-15T17:43:12.925886",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (90,188)-(485,479) with confidence 0.86",
+        "image_path": "intrusion_20250715_174312.jpg"
+    },
+    {
+        "id": 54,
+        "timestamp": "2025-07-15T17:43:13.005014",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (89,189)-(482,479) with confidence 0.85",
+        "image_path": "intrusion_20250715_174313.jpg"
+    },
+    {
+        "id": 55,
+        "timestamp": "2025-07-15T17:43:13.085245",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,189)-(479,479) with confidence 0.85",
+        "image_path": "intrusion_20250715_174313.jpg"
+    },
+    {
+        "id": 56,
+        "timestamp": "2025-07-15T17:43:13.183624",
+        "event_type": "Intrusion Detected",
+        "description": "Intrusion event: Person detected at (88,189)-(479,479) with confidence 0.85",
+        "image_path": "intrusion_20250715_174313.jpg"
+    }
+]
