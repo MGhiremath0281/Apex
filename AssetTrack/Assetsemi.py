@@ -19,14 +19,13 @@ UNSETTLED_OBJECT_REMOVAL_SECONDS = 10.0 # Time in seconds to remove an object if
 HISTORY_SIZE = 30                # Number of positions to keep for smoothing and trajectory drawing
 FRAME_PADDING = 20               # Padding around initial object bbox for reference frame
 IOU_THRESHOLD_ASSOCIATION = 0.4  # IOU threshold for associating detections to existing tracks
-MAX_DISTANCE_ASSOCIATION = 500   # ***CRUCIAL INCREASE for better re-association with fast movement***
+MAX_DISTANCE_ASSOCIATION = 250   # ***Increased for better re-association with fast movement***
 SETTLE_PERIOD_SECONDS = 5.0      # Time in seconds for a new/re-entering object to settle
 
 # Classes to EXCLUDE from tracking (use class names from CLASS_NAMES)
 # 'person' is now explicitly included as per the new requirement
 EXCLUDE_CLASSES = ['bed', 'chair', 'person'] 
 # Alternatively, specify classes to ONLY TRACK:
-# 'car' is now explicitly included as per the new requirement
 # TRACK_ONLY_CLASSES = ['car', 'dog'] 
 # If TRACK_ONLY_CLASSES is not empty, only those will be tracked.
 # If TRACK_ONLY_CLASSES is empty, EXCLUDE_CLASSES will be used.
@@ -83,18 +82,17 @@ class KalmanFilter:
         
         # Process noise covariance (Q) - uncertainty in the model (tune this)
         # Higher values mean filter trusts model less, measurements more.
-        # Increased Q for velocity components to make filter more responsive to dynamic motion
-        self.Q = np.diag([0.1, 0.1, 1.0, 1.0]) * 0.5 # Values like 0.05, 0.05, 0.5, 0.5
+        # ***Increased Q for better adaptability to dynamic movement***
+        self.Q = np.diag([0.1, 0.1, 0.5, 0.5]) * 0.1 
         
         # Measurement noise covariance (R) - uncertainty in the measurement (tune this)
-        # Lower values mean filter trusts measurements more, model less.
-        # Decreased R to trust YOLO detections more, assuming they are generally accurate
-        self.R = np.diag([2.0, 2.0]) # Was 3.0, 3.0
+        # Higher values mean filter trusts measurements less, model more.
+        # ***Decreased R to trust measurements more, improving accuracy***
+        self.R = np.diag([3.0, 3.0]) 
         
         # Error covariance matrix (P) - uncertainty in state estimate
         # High initial uncertainty to allow the filter to quickly converge to initial measurements
-        # Increased initial uncertainty for velocity to allow for faster adaptation
-        self.P = np.diag([100.0, 100.0, 50.0, 50.0]) # Was 10.0, 10.0
+        self.P = np.diag([100.0, 100.0, 10.0, 10.0])
 
         # Identity matrix for convenience
         self.I = np.eye(self.state.shape[0])
@@ -117,11 +115,6 @@ class KalmanFilter:
         self.P = (self.I - (K @ self.H)) @ self.P
         
         return self.state[0:2].flatten() # Return updated x, y coordinates
-    
-    def get_velocity(self):
-        """Returns the current estimated velocity (vx, vy)."""
-        return self.state[2].item(), self.state[3].item()
-
 
 class ObjectTracker:
     """Enhanced object tracker with individual thresholds, Kalman filter, and class filtering."""
@@ -747,36 +740,6 @@ class RealTimeMonitoringSystem:
             cv2.putText(frame, label, (int(x1), int(y1) - 10), 
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2, cv2.LINE_AA)
             
-            # --- Draw Centroid Mark ---
-            cv2.circle(frame, (int(current_pos[0]), int(current_pos[1])), 4, (255, 0, 255), -1) # Magenta circle
-            cv2.circle(frame, (int(current_pos[0]), int(current_pos[1])), 4, (0, 0, 0), 1) # Black border
-
-            # --- Draw Velocity Arrow ---
-            if obj_data['has_settled'] and len(obj_data['positions']) > 1: # Only show velocity arrow for settled objects
-                vx, vy = obj_data['kalman_filter'].get_velocity()
-                
-                # Scale the arrow length for better visualization
-                arrow_scale = 10 # Adjust this value as needed
-                arrow_end_x = int(current_pos[0] + vx * arrow_scale)
-                arrow_end_y = int(current_pos[1] + vy * arrow_scale)
-                
-                velocity_magnitude = math.sqrt(vx**2 + vy**2)
-                
-                # Only draw if velocity is significant enough to show a meaningful arrow
-                if velocity_magnitude > 2: # Prevent tiny, distracting arrows for nearly stationary objects
-                    cv2.arrowedLine(frame, 
-                                    (int(current_pos[0]), int(current_pos[1])), 
-                                    (arrow_end_x, arrow_end_y), 
-                                    (0, 255, 255), 2, tipLength=0.3) # Cyan arrow (B,G,R)
-                    
-                    # Add label for velocity magnitude
-                    # Position text slightly off the arrow tip
-                    text_x = arrow_end_x + 5 if vx >= 0 else arrow_end_x - 50 
-                    text_y = arrow_end_y + 5 if vy >= 0 else arrow_end_y - 10
-                    cv2.putText(frame, f"V:{velocity_magnitude:.1f}px/f", 
-                                (text_x, text_y), 
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 255), 1, cv2.LINE_AA)
-            
             # Draw trajectory path (from history)
             if len(obj_data['positions']) > 1:
                 for i in range(1, len(obj_data['positions'])):
@@ -1032,15 +995,8 @@ def main():
     print("============================================")
     
     # Initialize and run the system
-    # Model choice:
-    # 'yolov8n.pt' (nano) - Smallest, fastest, least accurate. Good for low-power devices.
-    # 'yolov8s.pt' (small) - Good balance of speed and accuracy.
-    # 'yolov8m.pt' (medium) - Better accuracy than 's', slightly slower. Recommended for general use.
-    # 'yolov8l.pt' (large) - Higher accuracy, slower.
-    # 'yolov8x.pt' (extra large) - Highest accuracy, slowest.
-    
     monitor = RealTimeMonitoringSystem(
-        model_path='yolov8m.pt',  # Changed to 'yolov8m.pt' for better speed/accuracy balance
+        model_path='yolov8x.pt',  # Will download if not present, 'yolov8n.pt' for faster inference
         confidence_threshold=0.5 # Adjust this value (0.0 to 1.0) to control detection sensitivity
     )
     
