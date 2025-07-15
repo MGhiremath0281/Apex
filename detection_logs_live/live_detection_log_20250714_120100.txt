@@ -1,8 +1,0 @@
---- Live Detection Log Started: 2025-07-14 12:01:00 ---
-Camera Source: 0
-Base Model: yolov8x.pt
-Fire Model: yolofirenew.pt
---------------------------------------------------
-[2025-07-14 12:01:00.389 | Frame 0] Base YOLO model loaded: yolov8x.pt
-[2025-07-14 12:01:00.389 | Frame 0] YOLOfire model loaded: yolofirenew.pt
-[2025-07-14 12:01:00.389 | Frame 0] ERROR: 'Fire' not found in YOLOfire model classes. Available: {0: 'Fire'}

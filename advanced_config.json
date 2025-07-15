@@ -1,0 +1,156 @@
+{
+  "zones": {
+    "1": [
+      [
+        320,
+        0
+      ],
+      [
+        484,
+        109
+      ],
+      [
+        410,
+        334
+      ],
+      [
+        205,
+        334
+      ],
+      [
+        131,
+        109
+      ]
+    ],
+    "2": [
+      [
+        1032,
+        540
+      ],
+      [
+        996,
+        602
+      ],
+      [
+        924,
+        602
+      ],
+      [
+        888,
+        540
+      ],
+      [
+        924,
+        477
+      ],
+      [
+        996,
+        477
+      ]
+    ],
+    "3": [
+      [
+        712,
+        144
+      ],
+      [
+        690,
+        194
+      ],
+      [
+        640,
+        216
+      ],
+      [
+        589,
+        194
+      ],
+      [
+        568,
+        144
+      ],
+      [
+        589,
+        93
+      ],
+      [
+        640,
+        72
+      ],
+      [
+        690,
+        93
+      ]
+    ],
+    "4": [
+      [
+        256,
+        432
+      ],
+      [
+        349,
+        594
+      ],
+      [
+        162,
+        594
+      ]
+    ]
+  },
+  "zone_enabled": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "zone_sensitivity": {
+    "1": 0.3,
+    "2": 0.4,
+    "3": 0.5,
+    "4": 0.6
+  },
+  "zone_names": {
+    "1": "CRITICAL ZONE",
+    "2": "HIGH SECURITY",
+    "3": "RESTRICTED AREA",
+    "4": "PERIMETER"
+  },
+  "settings": {
+    "show_heatmap": true,
+    "show_analytics": false,
+    "show_trails": true,
+    "show_confidence": true,
+    "night_mode": false,
+    "trail_length": 30,
+    "alert_duration": 5.0
+  },
+  "statistics": {
+    "total_detections": 241,
+    "total_intrusions": 15,
+    "zone_intrusions": {
+      "1": 0,
+      "2": 15,
+      "3": 0,
+      "4": 0
+    },
+    "class_detections": {
+      "person": 238,
+      "bicycle": 0,
+      "car": 0,
+      "motorcycle": 0,
+      "bus": 0,
+      "truck": 0,
+      "bird": 0,
+      "cat": 0,
+      "dog": 3,
+      "horse": 0,
+      "sheep": 0,
+      "cow": 0,
+      "elephant": 0,
+      "bear": 0,
+      "zebra": 0,
+      "giraffe": 0
+    }
+  },
+  "timestamp": "2025-07-15T17:33:09.616701"
+}
