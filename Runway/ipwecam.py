@@ -19,7 +19,7 @@ def main():
     model = YOLO(r'C:\Users\adity\Desktop\OBJDETECT\yolov8l.pt')
     print("Model loaded.")
 
-    ip_stream_url = "http://192.168.17.130:8080/video"
+    ip_stream_url = "http://10.236.237.207:8080/video"  # <-- updated here
     cap = cv2.VideoCapture(ip_stream_url)
 
     if not cap.isOpened():

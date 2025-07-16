@@ -1,0 +1,321 @@
+--- Detection Log Started: 2025-07-16 19:58:04.653123 ---
+Video Source: c:\Users\adity\Desktop\OBJDETECT\data\firedata2.mp4
+--------------------------------------------------
+[2025-07-16 19:58:04.955 | Frame 0] Base and fire YOLO models loaded.
+[2025-07-16 19:58:07.295 | Frame 1] Detected VEHICLE: Car 0.91 at [1024,521,1213,661] conf: 0.91
+[2025-07-16 19:58:07.295 | Frame 1] Detected HUMAN: Person 0.90 at [345,387,531,679] conf: 0.90
+[2025-07-16 19:58:07.295 | Frame 1] Detected HUMAN: Person 0.90 at [169,389,366,679] conf: 0.90
+[2025-07-16 19:58:07.295 | Frame 1] Detected VEHICLE: Car 0.90 at [821,519,1050,659] conf: 0.90
+[2025-07-16 19:58:07.306 | Frame 1] Detected VEHICLE: Truck 0.87 at [578,472,824,662] conf: 0.87
+[2025-07-16 19:58:07.306 | Frame 1] Detected FIRE: FIRE 0.80 at [269,221,408,291] conf: 0.80
+[2025-07-16 19:58:07.306 | Frame 1] Detected FIRE: FIRE 0.67 at [694,125,804,290] conf: 0.67
+[2025-07-16 19:58:07.306 | Frame 1] Alert triggered: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:07.306 | Frame 1] Sound alert triggered: FIRE
+[2025-07-16 19:58:07.306 | Frame 1] Sound file not found: fire_alert.mp3
+[2025-07-16 19:58:07.951 | Frame 2] Detected VEHICLE: Car 0.91 at [1024,520,1213,659] conf: 0.91
+[2025-07-16 19:58:07.951 | Frame 2] Detected HUMAN: Person 0.91 at [172,388,368,679] conf: 0.91
+[2025-07-16 19:58:07.951 | Frame 2] Detected HUMAN: Person 0.91 at [346,385,537,679] conf: 0.91
+[2025-07-16 19:58:07.951 | Frame 2] Detected VEHICLE: Car 0.90 at [821,518,1051,658] conf: 0.90
+[2025-07-16 19:58:07.951 | Frame 2] Detected VEHICLE: Truck 0.89 at [578,475,825,661] conf: 0.89
+[2025-07-16 19:58:07.951 | Frame 2] Detected FIRE: FIRE 0.78 at [265,218,406,292] conf: 0.78
+[2025-07-16 19:58:07.951 | Frame 2] Detected FIRE: FIRE 0.52 at [700,124,808,305] conf: 0.52
+[2025-07-16 19:58:08.472 | Frame 3] Detected HUMAN: Person 0.92 at [176,387,368,679] conf: 0.92
+[2025-07-16 19:58:08.472 | Frame 3] Detected HUMAN: Person 0.91 at [349,382,533,679] conf: 0.91
+[2025-07-16 19:58:08.472 | Frame 3] Detected VEHICLE: Car 0.91 at [1026,517,1213,658] conf: 0.91
+[2025-07-16 19:58:08.474 | Frame 3] Detected VEHICLE: Truck 0.90 at [579,472,826,658] conf: 0.90
+[2025-07-16 19:58:08.474 | Frame 3] Detected VEHICLE: Car 0.89 at [822,513,1051,655] conf: 0.89
+[2025-07-16 19:58:08.474 | Frame 3] Detected FIRE: FIRE 0.72 at [271,232,410,288] conf: 0.72
+[2025-07-16 19:58:08.474 | Frame 3] Detected FIRE: FIRE 0.40 at [530,99,817,310] conf: 0.40
+[2025-07-16 19:58:08.474 | Frame 3] Detected FIRE: FIRE 0.31 at [527,98,955,313] conf: 0.31
+[2025-07-16 19:58:08.997 | Frame 4] Detected HUMAN: Person 0.92 at [176,387,369,679] conf: 0.92
+[2025-07-16 19:58:08.997 | Frame 4] Detected HUMAN: Person 0.91 at [349,383,535,678] conf: 0.91
+[2025-07-16 19:58:08.997 | Frame 4] Detected VEHICLE: Car 0.91 at [1026,517,1213,658] conf: 0.91
+[2025-07-16 19:58:08.997 | Frame 4] Detected VEHICLE: Truck 0.91 at [579,472,826,658] conf: 0.91
+[2025-07-16 19:58:08.997 | Frame 4] Detected VEHICLE: Car 0.89 at [822,513,1051,654] conf: 0.89
+[2025-07-16 19:58:08.997 | Frame 4] Detected FIRE: FIRE 0.72 at [271,232,408,287] conf: 0.72
+[2025-07-16 19:58:09.536 | Frame 5] Detected HUMAN: Person 0.93 at [350,381,531,679] conf: 0.93
+[2025-07-16 19:58:09.536 | Frame 5] Detected VEHICLE: Car 0.92 at [1026,516,1213,657] conf: 0.92
+[2025-07-16 19:58:09.536 | Frame 5] Detected HUMAN: Person 0.90 at [176,385,368,679] conf: 0.90
+[2025-07-16 19:58:09.536 | Frame 5] Detected VEHICLE: Car 0.90 at [822,514,1052,653] conf: 0.90
+[2025-07-16 19:58:09.536 | Frame 5] Detected VEHICLE: Truck 0.89 at [580,472,826,655] conf: 0.89
+[2025-07-16 19:58:09.536 | Frame 5] Detected FIRE: FIRE 0.77 at [269,230,416,288] conf: 0.77
+[2025-07-16 19:58:09.536 | Frame 5] Detected FIRE: FIRE 0.43 at [632,92,821,306] conf: 0.43
+[2025-07-16 19:58:10.043 | Frame 6] Detected HUMAN: Person 0.93 at [181,383,370,679] conf: 0.93
+[2025-07-16 19:58:10.043 | Frame 6] Detected HUMAN: Person 0.93 at [352,379,533,680] conf: 0.93
+[2025-07-16 19:58:10.043 | Frame 6] Detected VEHICLE: Car 0.91 at [1026,513,1213,655] conf: 0.91
+[2025-07-16 19:58:10.043 | Frame 6] Detected VEHICLE: Truck 0.89 at [580,466,827,654] conf: 0.89
+[2025-07-16 19:58:10.043 | Frame 6] Detected VEHICLE: Car 0.89 at [823,511,1053,649] conf: 0.89
+[2025-07-16 19:58:10.043 | Frame 6] Detected FIRE: FIRE 0.78 at [265,225,433,286] conf: 0.78
+[2025-07-16 19:58:10.043 | Frame 6] Detected FIRE: FIRE 0.75 at [667,90,835,284] conf: 0.75
+[2025-07-16 19:58:10.043 | Frame 6] Detected FIRE: FIRE 0.44 at [661,84,978,312] conf: 0.44
+[2025-07-16 19:58:10.583 | Frame 7] Detected HUMAN: Person 0.93 at [181,383,370,679] conf: 0.93
+[2025-07-16 19:58:10.583 | Frame 7] Detected HUMAN: Person 0.93 at [352,379,532,680] conf: 0.93
+[2025-07-16 19:58:10.583 | Frame 7] Detected VEHICLE: Car 0.91 at [1026,513,1213,655] conf: 0.91
+[2025-07-16 19:58:10.583 | Frame 7] Detected VEHICLE: Truck 0.89 at [580,466,827,654] conf: 0.89
+[2025-07-16 19:58:10.583 | Frame 7] Detected VEHICLE: Car 0.89 at [823,511,1053,649] conf: 0.89
+[2025-07-16 19:58:10.583 | Frame 7] Detected FIRE: FIRE 0.78 at [265,225,433,286] conf: 0.78
+[2025-07-16 19:58:10.583 | Frame 7] Detected FIRE: FIRE 0.76 at [667,90,835,284] conf: 0.76
+[2025-07-16 19:58:10.583 | Frame 7] Detected FIRE: FIRE 0.46 at [663,83,979,313] conf: 0.46
+[2025-07-16 19:58:11.088 | Frame 8] Detected HUMAN: Person 0.93 at [182,381,371,680] conf: 0.93
+[2025-07-16 19:58:11.088 | Frame 8] Detected HUMAN: Person 0.93 at [353,378,537,679] conf: 0.93
+[2025-07-16 19:58:11.088 | Frame 8] Detected VEHICLE: Car 0.91 at [1026,512,1213,654] conf: 0.91
+[2025-07-16 19:58:11.088 | Frame 8] Detected VEHICLE: Car 0.90 at [823,510,1053,650] conf: 0.90
+[2025-07-16 19:58:11.088 | Frame 8] Detected VEHICLE: Truck 0.89 at [580,467,828,653] conf: 0.89
+[2025-07-16 19:58:11.088 | Frame 8] Detected FIRE: FIRE 0.79 at [262,223,426,283] conf: 0.79
+[2025-07-16 19:58:11.088 | Frame 8] Detected FIRE: FIRE 0.78 at [658,82,838,275] conf: 0.78
+[2025-07-16 19:58:11.088 | Frame 8] Detected FIRE: FIRE 0.41 at [658,78,973,309] conf: 0.41
+[2025-07-16 19:58:11.088 | Frame 8] IR mode enabled.
+[2025-07-16 19:58:11.595 | Frame 9] Detected HUMAN: Person 0.94 at [355,375,534,680] conf: 0.94
+[2025-07-16 19:58:11.595 | Frame 9] Detected HUMAN: Person 0.93 at [184,379,372,680] conf: 0.93
+[2025-07-16 19:58:11.595 | Frame 9] Detected VEHICLE: Car 0.92 at [1028,511,1213,651] conf: 0.92
+[2025-07-16 19:58:11.595 | Frame 9] Detected VEHICLE: Car 0.89 at [819,506,1053,650] conf: 0.89
+[2025-07-16 19:58:11.595 | Frame 9] Detected VEHICLE: Truck 0.77 at [581,467,831,654] conf: 0.77
+[2025-07-16 19:58:11.595 | Frame 9] Detected FIRE: FIRE 0.55 at [683,136,831,265] conf: 0.55
+[2025-07-16 19:58:12.102 | Frame 10] Detected HUMAN: Person 0.94 at [355,375,534,680] conf: 0.94
+[2025-07-16 19:58:12.102 | Frame 10] Detected HUMAN: Person 0.93 at [184,379,372,680] conf: 0.93
+[2025-07-16 19:58:12.102 | Frame 10] Detected VEHICLE: Car 0.92 at [1028,511,1213,651] conf: 0.92
+[2025-07-16 19:58:12.102 | Frame 10] Detected VEHICLE: Car 0.89 at [819,506,1053,650] conf: 0.89
+[2025-07-16 19:58:12.102 | Frame 10] Detected VEHICLE: Truck 0.77 at [581,467,831,654] conf: 0.77
+[2025-07-16 19:58:12.102 | Frame 10] Detected FIRE: FIRE 0.57 at [683,136,831,265] conf: 0.57
+[2025-07-16 19:58:12.622 | Frame 11] Detected HUMAN: Person 0.94 at [357,375,535,679] conf: 0.94
+[2025-07-16 19:58:12.622 | Frame 11] Detected VEHICLE: Car 0.92 at [1029,509,1213,649] conf: 0.92
+[2025-07-16 19:58:12.622 | Frame 11] Detected HUMAN: Person 0.92 at [185,378,369,680] conf: 0.92
+[2025-07-16 19:58:12.622 | Frame 11] Detected VEHICLE: Car 0.89 at [818,505,1053,650] conf: 0.89
+[2025-07-16 19:58:12.622 | Frame 11] Detected VEHICLE: Truck 0.79 at [580,467,831,646] conf: 0.79
+[2025-07-16 19:58:12.622 | Frame 11] Alert cleared: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:12.622 | Frame 11] Alert triggered: ALERT: HUMAN DETECTED!
+[2025-07-16 19:58:12.622 | Frame 11] Sound alert triggered: HUMAN
+[2025-07-16 19:58:12.622 | Frame 11] Sound file not found: human_alert.mp3
+[2025-07-16 19:58:13.139 | Frame 12] Detected HUMAN: Person 0.93 at [358,374,541,679] conf: 0.93
+[2025-07-16 19:58:13.139 | Frame 12] Detected HUMAN: Person 0.92 at [187,377,371,679] conf: 0.92
+[2025-07-16 19:58:13.154 | Frame 12] Detected VEHICLE: Car 0.92 at [1029,509,1213,650] conf: 0.92
+[2025-07-16 19:58:13.154 | Frame 12] Detected VEHICLE: Car 0.89 at [816,504,1053,649] conf: 0.89
+[2025-07-16 19:58:13.154 | Frame 12] Detected VEHICLE: Truck 0.71 at [582,464,832,646] conf: 0.71
+[2025-07-16 19:58:13.678 | Frame 13] Detected HUMAN: Person 0.94 at [359,373,537,678] conf: 0.94
+[2025-07-16 19:58:13.678 | Frame 13] Detected HUMAN: Person 0.92 at [188,377,374,679] conf: 0.92
+[2025-07-16 19:58:13.678 | Frame 13] Detected VEHICLE: Car 0.92 at [1030,508,1213,649] conf: 0.92
+[2025-07-16 19:58:13.678 | Frame 13] Detected VEHICLE: Car 0.89 at [817,502,1054,648] conf: 0.89
+[2025-07-16 19:58:13.678 | Frame 13] Detected VEHICLE: Truck 0.86 at [582,463,831,645] conf: 0.86
+[2025-07-16 19:58:14.201 | Frame 14] Detected HUMAN: Person 0.93 at [359,371,541,679] conf: 0.93
+[2025-07-16 19:58:14.201 | Frame 14] Detected HUMAN: Person 0.92 at [189,377,374,679] conf: 0.92
+[2025-07-16 19:58:14.201 | Frame 14] Detected VEHICLE: Car 0.92 at [1030,507,1213,648] conf: 0.92
+[2025-07-16 19:58:14.201 | Frame 14] Detected VEHICLE: Car 0.89 at [819,503,1054,647] conf: 0.89
+[2025-07-16 19:58:14.201 | Frame 14] Detected VEHICLE: Truck 0.86 at [584,463,831,645] conf: 0.86
+[2025-07-16 19:58:14.723 | Frame 15] Detected HUMAN: Person 0.93 at [359,372,540,679] conf: 0.93
+[2025-07-16 19:58:14.723 | Frame 15] Detected HUMAN: Person 0.93 at [191,377,375,679] conf: 0.93
+[2025-07-16 19:58:14.723 | Frame 15] Detected VEHICLE: Car 0.92 at [1031,506,1213,647] conf: 0.92
+[2025-07-16 19:58:14.723 | Frame 15] Detected VEHICLE: Car 0.90 at [822,502,1055,644] conf: 0.90
+[2025-07-16 19:58:14.723 | Frame 15] Detected VEHICLE: Truck 0.87 at [584,462,832,644] conf: 0.87
+[2025-07-16 19:58:15.216 | Frame 16] Detected HUMAN: Person 0.93 at [361,371,539,678] conf: 0.93
+[2025-07-16 19:58:15.216 | Frame 16] Detected HUMAN: Person 0.93 at [192,374,377,679] conf: 0.93
+[2025-07-16 19:58:15.216 | Frame 16] Detected VEHICLE: Car 0.91 at [1030,505,1213,645] conf: 0.91
+[2025-07-16 19:58:15.216 | Frame 16] Detected VEHICLE: Car 0.89 at [821,500,1055,643] conf: 0.89
+[2025-07-16 19:58:15.216 | Frame 16] Detected VEHICLE: Truck 0.82 at [584,460,833,642] conf: 0.82
+[2025-07-16 19:58:15.768 | Frame 17] Detected HUMAN: Person 0.93 at [361,371,539,678] conf: 0.93
+[2025-07-16 19:58:15.768 | Frame 17] Detected HUMAN: Person 0.93 at [192,374,376,679] conf: 0.93
+[2025-07-16 19:58:15.768 | Frame 17] Detected VEHICLE: Car 0.91 at [1030,505,1213,645] conf: 0.91
+[2025-07-16 19:58:15.768 | Frame 17] Detected VEHICLE: Car 0.89 at [822,499,1055,643] conf: 0.89
+[2025-07-16 19:58:15.768 | Frame 17] Detected VEHICLE: Truck 0.83 at [584,460,833,641] conf: 0.83
+[2025-07-16 19:58:16.300 | Frame 18] Detected HUMAN: Person 0.93 at [194,375,376,679] conf: 0.93
+[2025-07-16 19:58:16.300 | Frame 18] Detected HUMAN: Person 0.92 at [361,370,539,678] conf: 0.92
+[2025-07-16 19:58:16.300 | Frame 18] Detected VEHICLE: Car 0.91 at [1029,505,1213,644] conf: 0.91
+[2025-07-16 19:58:16.300 | Frame 18] Detected VEHICLE: Car 0.90 at [823,500,1055,642] conf: 0.90
+[2025-07-16 19:58:16.300 | Frame 18] Detected VEHICLE: Truck 0.84 at [585,459,833,639] conf: 0.84
+[2025-07-16 19:58:16.300 | Frame 18] Detected FIRE: FIRE 0.36 at [0,7,988,543] conf: 0.36
+[2025-07-16 19:58:16.300 | Frame 18] Alert cleared: ALERT: HUMAN DETECTED!
+[2025-07-16 19:58:16.300 | Frame 18] Alert triggered: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:16.300 | Frame 18] Sound alert triggered: FIRE
+[2025-07-16 19:58:16.300 | Frame 18] Sound file not found: fire_alert.mp3
+[2025-07-16 19:58:16.809 | Frame 19] Detected HUMAN: Person 0.93 at [361,370,539,679] conf: 0.93
+[2025-07-16 19:58:16.809 | Frame 19] Detected HUMAN: Person 0.93 at [194,375,377,679] conf: 0.93
+[2025-07-16 19:58:16.809 | Frame 19] Detected VEHICLE: Car 0.91 at [1029,504,1213,643] conf: 0.91
+[2025-07-16 19:58:16.809 | Frame 19] Detected VEHICLE: Car 0.90 at [824,500,1054,641] conf: 0.90
+[2025-07-16 19:58:16.811 | Frame 19] Detected VEHICLE: Truck 0.83 at [586,459,833,638] conf: 0.83
+[2025-07-16 19:58:16.811 | Frame 19] Detected FIRE: FIRE 0.39 at [0,7,981,537] conf: 0.39
+[2025-07-16 19:58:16.811 | Frame 19] Rotated to 90°.
+[2025-07-16 19:58:17.332 | Frame 20] Detected FIRE: FIRE 0.72 at [0,47,666,1214] conf: 0.72
+[2025-07-16 19:58:17.854 | Frame 21] Detected FIRE: FIRE 0.83 at [0,27,666,1214] conf: 0.83
+[2025-07-16 19:58:18.345 | Frame 22] Detected FIRE: FIRE 0.83 at [0,28,666,1214] conf: 0.83
+[2025-07-16 19:58:18.866 | Frame 23] Detected FIRE: FIRE 0.85 at [0,31,666,1209] conf: 0.85
+[2025-07-16 19:58:18.882 | Frame 23] Rotated to 180°.
+[2025-07-16 19:58:19.389 | Frame 24] Detected VEHICLE: Motorcycle 0.72 at [839,0,1077,275] conf: 0.72
+[2025-07-16 19:58:19.389 | Frame 24] Detected HUMAN: Person 0.55 at [649,0,843,276] conf: 0.55
+[2025-07-16 19:58:19.389 | Frame 24] Detected FIRE: FIRE 0.36 at [949,358,1212,682] conf: 0.36
+[2025-07-16 19:58:19.912 | Frame 25] Detected VEHICLE: Motorcycle 0.72 at [839,0,1077,275] conf: 0.72
+[2025-07-16 19:58:19.912 | Frame 25] Detected HUMAN: Person 0.54 at [649,0,844,286] conf: 0.54
+[2025-07-16 19:58:19.912 | Frame 25] Detected FIRE: FIRE 0.37 at [948,357,1212,682] conf: 0.37
+[2025-07-16 19:58:20.431 | Frame 26] Detected VEHICLE: Motorcycle 0.73 at [838,0,1077,273] conf: 0.73
+[2025-07-16 19:58:20.431 | Frame 26] Detected HUMAN: Person 0.61 at [650,0,846,293] conf: 0.61
+[2025-07-16 19:58:20.431 | Frame 26] Detected FIRE: FIRE 0.34 at [946,357,1212,682] conf: 0.34
+[2025-07-16 19:58:20.431 | Frame 26] Rotated to 270°.
+[2025-07-16 19:58:20.938 | Frame 27] Detected FIRE: FIRE 0.64 at [10,0,681,1206] conf: 0.64
+[2025-07-16 19:58:21.443 | Frame 28] Detected VEHICLE: Truck 0.52 at [247,7,682,1087] conf: 0.52
+[2025-07-16 19:58:21.443 | Frame 28] Detected FIRE: FIRE 0.60 at [8,0,681,1203] conf: 0.60
+[2025-07-16 19:58:21.443 | Frame 28] Rotated to 0°.
+[2025-07-16 19:58:21.964 | Frame 29] Detected HUMAN: Person 0.93 at [196,372,380,680] conf: 0.93
+[2025-07-16 19:58:21.964 | Frame 29] Detected HUMAN: Person 0.92 at [365,365,544,679] conf: 0.92
+[2025-07-16 19:58:21.964 | Frame 29] Detected VEHICLE: Car 0.92 at [1033,500,1213,638] conf: 0.92
+[2025-07-16 19:58:21.964 | Frame 29] Detected VEHICLE: Car 0.90 at [826,497,1059,637] conf: 0.90
+[2025-07-16 19:58:21.964 | Frame 29] Detected VEHICLE: Truck 0.78 at [588,456,836,635] conf: 0.78
+[2025-07-16 19:58:21.964 | Frame 29] Detected FIRE: FIRE 0.69 at [0,9,931,546] conf: 0.69
+[2025-07-16 19:58:22.484 | Frame 30] Detected HUMAN: Person 0.93 at [196,372,380,680] conf: 0.93
+[2025-07-16 19:58:22.484 | Frame 30] Detected HUMAN: Person 0.93 at [365,365,544,679] conf: 0.93
+[2025-07-16 19:58:22.484 | Frame 30] Detected VEHICLE: Car 0.92 at [1033,500,1213,638] conf: 0.92
+[2025-07-16 19:58:22.484 | Frame 30] Detected VEHICLE: Car 0.90 at [827,497,1058,637] conf: 0.90
+[2025-07-16 19:58:22.484 | Frame 30] Detected VEHICLE: Truck 0.79 at [588,456,836,635] conf: 0.79
+[2025-07-16 19:58:22.484 | Frame 30] Detected FIRE: FIRE 0.69 at [0,8,932,546] conf: 0.69
+[2025-07-16 19:58:23.023 | Frame 31] Detected HUMAN: Person 0.93 at [197,371,380,680] conf: 0.93
+[2025-07-16 19:58:23.023 | Frame 31] Detected HUMAN: Person 0.92 at [365,364,545,679] conf: 0.92
+[2025-07-16 19:58:23.023 | Frame 31] Detected VEHICLE: Car 0.92 at [1033,500,1213,637] conf: 0.92
+[2025-07-16 19:58:23.023 | Frame 31] Detected VEHICLE: Car 0.90 at [825,497,1059,637] conf: 0.90
+[2025-07-16 19:58:23.023 | Frame 31] Detected VEHICLE: Truck 0.82 at [588,456,836,634] conf: 0.82
+[2025-07-16 19:58:23.023 | Frame 31] Detected FIRE: FIRE 0.71 at [0,8,929,550] conf: 0.71
+[2025-07-16 19:58:23.586 | Frame 32] Detected HUMAN: Person 0.93 at [196,372,380,680] conf: 0.93
+[2025-07-16 19:58:23.586 | Frame 32] Detected HUMAN: Person 0.93 at [366,364,547,679] conf: 0.93
+[2025-07-16 19:58:23.586 | Frame 32] Detected VEHICLE: Car 0.92 at [1032,499,1213,636] conf: 0.92
+[2025-07-16 19:58:23.586 | Frame 32] Detected VEHICLE: Car 0.90 at [827,497,1059,638] conf: 0.90
+[2025-07-16 19:58:23.586 | Frame 32] Detected VEHICLE: Truck 0.81 at [588,456,836,633] conf: 0.81
+[2025-07-16 19:58:23.586 | Frame 32] Detected FIRE: FIRE 0.59 at [0,8,928,558] conf: 0.59
+[2025-07-16 19:58:24.095 | Frame 33] Detected HUMAN: Person 0.93 at [196,372,380,680] conf: 0.93
+[2025-07-16 19:58:24.095 | Frame 33] Detected VEHICLE: Car 0.92 at [1032,499,1213,636] conf: 0.92
+[2025-07-16 19:58:24.095 | Frame 33] Detected HUMAN: Person 0.92 at [366,364,552,680] conf: 0.92
+[2025-07-16 19:58:24.095 | Frame 33] Detected VEHICLE: Car 0.91 at [826,497,1061,637] conf: 0.91
+[2025-07-16 19:58:24.095 | Frame 33] Detected VEHICLE: Truck 0.76 at [589,455,836,632] conf: 0.76
+[2025-07-16 19:58:24.095 | Frame 33] Detected VEHICLE: Bus 0.65 at [128,253,1213,600] conf: 0.65
+[2025-07-16 19:58:24.095 | Frame 33] Detected FIRE: FIRE 0.70 at [692,104,827,270] conf: 0.70
+[2025-07-16 19:58:24.633 | Frame 34] Detected HUMAN: Person 0.93 at [196,372,379,680] conf: 0.93
+[2025-07-16 19:58:24.633 | Frame 34] Detected VEHICLE: Car 0.92 at [1032,499,1213,635] conf: 0.92
+[2025-07-16 19:58:24.633 | Frame 34] Detected HUMAN: Person 0.92 at [367,363,552,679] conf: 0.92
+[2025-07-16 19:58:24.633 | Frame 34] Detected VEHICLE: Car 0.91 at [826,497,1060,637] conf: 0.91
+[2025-07-16 19:58:24.633 | Frame 34] Detected VEHICLE: Truck 0.80 at [589,455,837,632] conf: 0.80
+[2025-07-16 19:58:24.633 | Frame 34] Detected FIRE: FIRE 0.59 at [690,100,834,265] conf: 0.59
+[2025-07-16 19:58:24.633 | Frame 34] Detected FIRE: FIRE 0.33 at [0,9,970,558] conf: 0.33
+[2025-07-16 19:58:25.172 | Frame 35] Detected HUMAN: Person 0.93 at [197,369,380,679] conf: 0.93
+[2025-07-16 19:58:25.172 | Frame 35] Detected HUMAN: Person 0.92 at [367,362,552,679] conf: 0.92
+[2025-07-16 19:58:25.172 | Frame 35] Detected VEHICLE: Car 0.91 at [1034,497,1213,634] conf: 0.91
+[2025-07-16 19:58:25.172 | Frame 35] Detected VEHICLE: Car 0.90 at [830,495,1061,637] conf: 0.90
+[2025-07-16 19:58:25.172 | Frame 35] Detected VEHICLE: Truck 0.76 at [589,453,837,635] conf: 0.76
+[2025-07-16 19:58:25.172 | Frame 35] Detected FIRE: FIRE 0.52 at [743,153,828,268] conf: 0.52
+[2025-07-16 19:58:25.172 | Frame 35] Detected FIRE: FIRE 0.43 at [0,8,1014,562] conf: 0.43
+[2025-07-16 19:58:25.696 | Frame 36] Detected HUMAN: Person 0.93 at [196,369,381,679] conf: 0.93
+[2025-07-16 19:58:25.696 | Frame 36] Detected HUMAN: Person 0.92 at [367,362,552,679] conf: 0.92
+[2025-07-16 19:58:25.696 | Frame 36] Detected VEHICLE: Car 0.91 at [1034,497,1213,634] conf: 0.91
+[2025-07-16 19:58:25.696 | Frame 36] Detected VEHICLE: Car 0.90 at [829,495,1061,637] conf: 0.90
+[2025-07-16 19:58:25.696 | Frame 36] Detected VEHICLE: Truck 0.77 at [589,453,837,635] conf: 0.77
+[2025-07-16 19:58:25.696 | Frame 36] Detected FIRE: FIRE 0.52 at [743,153,828,268] conf: 0.52
+[2025-07-16 19:58:25.696 | Frame 36] Detected FIRE: FIRE 0.43 at [0,8,1015,562] conf: 0.43
+[2025-07-16 19:58:26.220 | Frame 37] Detected HUMAN: Person 0.92 at [197,370,380,679] conf: 0.92
+[2025-07-16 19:58:26.220 | Frame 37] Detected HUMAN: Person 0.92 at [367,362,554,679] conf: 0.92
+[2025-07-16 19:58:26.220 | Frame 37] Detected VEHICLE: Car 0.92 at [1033,497,1213,634] conf: 0.92
+[2025-07-16 19:58:26.220 | Frame 37] Detected VEHICLE: Car 0.90 at [830,495,1060,636] conf: 0.90
+[2025-07-16 19:58:26.220 | Frame 37] Detected VEHICLE: Truck 0.79 at [589,453,838,636] conf: 0.79
+[2025-07-16 19:58:26.220 | Frame 37] Detected FIRE: FIRE 0.50 at [743,144,831,270] conf: 0.50
+[2025-07-16 19:58:26.741 | Frame 38] Detected HUMAN: Person 0.93 at [197,369,382,679] conf: 0.93
+[2025-07-16 19:58:26.741 | Frame 38] Detected HUMAN: Person 0.92 at [367,363,554,679] conf: 0.92
+[2025-07-16 19:58:26.741 | Frame 38] Detected VEHICLE: Car 0.91 at [1034,497,1213,636] conf: 0.91
+[2025-07-16 19:58:26.741 | Frame 38] Detected VEHICLE: Car 0.90 at [829,495,1061,636] conf: 0.90
+[2025-07-16 19:58:26.741 | Frame 38] Detected VEHICLE: Truck 0.86 at [589,454,838,638] conf: 0.86
+[2025-07-16 19:58:26.741 | Frame 38] Alert cleared: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:26.741 | Frame 38] Alert triggered: ALERT: HUMAN DETECTED!
+[2025-07-16 19:58:26.741 | Frame 38] Sound alert triggered: HUMAN
+[2025-07-16 19:58:26.741 | Frame 38] Sound file not found: human_alert.mp3
+[2025-07-16 19:58:27.259 | Frame 39] Detected HUMAN: Person 0.94 at [197,368,382,679] conf: 0.94
+[2025-07-16 19:58:27.259 | Frame 39] Detected HUMAN: Person 0.93 at [368,362,549,679] conf: 0.93
+[2025-07-16 19:58:27.259 | Frame 39] Detected VEHICLE: Car 0.91 at [1033,496,1213,636] conf: 0.91
+[2025-07-16 19:58:27.259 | Frame 39] Detected VEHICLE: Car 0.90 at [830,493,1060,635] conf: 0.90
+[2025-07-16 19:58:27.259 | Frame 39] Detected VEHICLE: Truck 0.89 at [589,453,838,638] conf: 0.89
+[2025-07-16 19:58:27.259 | Frame 39] Detected FIRE: FIRE 0.32 at [0,7,987,557] conf: 0.32
+[2025-07-16 19:58:27.259 | Frame 39] Alert cleared: ALERT: HUMAN DETECTED!
+[2025-07-16 19:58:27.259 | Frame 39] Alert triggered: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:27.259 | Frame 39] Sound alert triggered: FIRE
+[2025-07-16 19:58:27.259 | Frame 39] Sound file not found: fire_alert.mp3
+[2025-07-16 19:58:27.789 | Frame 40] Detected HUMAN: Person 0.92 at [368,362,547,679] conf: 0.92
+[2025-07-16 19:58:27.789 | Frame 40] Detected HUMAN: Person 0.92 at [197,368,380,679] conf: 0.92
+[2025-07-16 19:58:27.790 | Frame 40] Detected VEHICLE: Car 0.90 at [1036,495,1213,634] conf: 0.90
+[2025-07-16 19:58:27.790 | Frame 40] Detected VEHICLE: Car 0.89 at [830,493,1061,634] conf: 0.89
+[2025-07-16 19:58:27.790 | Frame 40] Detected VEHICLE: Truck 0.81 at [590,451,839,637] conf: 0.81
+[2025-07-16 19:58:27.790 | Frame 40] Alert cleared: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:27.790 | Frame 40] Alert triggered: ALERT: HUMAN DETECTED!
+[2025-07-16 19:58:27.790 | Frame 40] Sound alert triggered: HUMAN
+[2025-07-16 19:58:27.790 | Frame 40] Sound file not found: human_alert.mp3
+[2025-07-16 19:58:28.302 | Frame 41] Detected HUMAN: Person 0.93 at [197,368,381,679] conf: 0.93
+[2025-07-16 19:58:28.302 | Frame 41] Detected HUMAN: Person 0.92 at [368,362,547,679] conf: 0.92
+[2025-07-16 19:58:28.302 | Frame 41] Detected VEHICLE: Car 0.90 at [1036,495,1213,634] conf: 0.90
+[2025-07-16 19:58:28.302 | Frame 41] Detected VEHICLE: Car 0.90 at [830,493,1061,634] conf: 0.90
+[2025-07-16 19:58:28.302 | Frame 41] Detected VEHICLE: Truck 0.78 at [590,452,839,637] conf: 0.78
+[2025-07-16 19:58:28.857 | Frame 42] Detected HUMAN: Person 0.94 at [197,368,384,679] conf: 0.94
+[2025-07-16 19:58:28.857 | Frame 42] Detected HUMAN: Person 0.93 at [368,362,546,679] conf: 0.93
+[2025-07-16 19:58:28.857 | Frame 42] Detected VEHICLE: Car 0.90 at [1039,496,1213,634] conf: 0.90
+[2025-07-16 19:58:28.857 | Frame 42] Detected VEHICLE: Car 0.90 at [829,493,1062,634] conf: 0.90
+[2025-07-16 19:58:28.857 | Frame 42] Detected VEHICLE: Truck 0.86 at [591,451,839,638] conf: 0.86
+[2025-07-16 19:58:29.402 | Frame 43] Detected HUMAN: Person 0.93 at [197,368,382,679] conf: 0.93
+[2025-07-16 19:58:29.402 | Frame 43] Detected HUMAN: Person 0.93 at [368,362,547,678] conf: 0.93
+[2025-07-16 19:58:29.402 | Frame 43] Detected VEHICLE: Car 0.91 at [830,493,1061,633] conf: 0.91
+[2025-07-16 19:58:29.402 | Frame 43] Detected VEHICLE: Car 0.90 at [1037,495,1213,635] conf: 0.90
+[2025-07-16 19:58:29.402 | Frame 43] Detected VEHICLE: Truck 0.82 at [590,451,838,638] conf: 0.82
+[2025-07-16 19:58:29.948 | Frame 44] Detected HUMAN: Person 0.93 at [369,362,545,678] conf: 0.93
+[2025-07-16 19:58:29.948 | Frame 44] Detected HUMAN: Person 0.92 at [197,368,380,679] conf: 0.92
+[2025-07-16 19:58:29.948 | Frame 44] Detected VEHICLE: Car 0.90 at [1039,496,1213,633] conf: 0.90
+[2025-07-16 19:58:29.948 | Frame 44] Detected VEHICLE: Car 0.90 at [830,493,1062,634] conf: 0.90
+[2025-07-16 19:58:29.948 | Frame 44] Detected VEHICLE: Truck 0.78 at [591,451,839,638] conf: 0.78
+[2025-07-16 19:58:29.948 | Frame 44] Detected FIRE: FIRE 0.30 at [1,5,885,554] conf: 0.30
+[2025-07-16 19:58:29.948 | Frame 44] Alert cleared: ALERT: HUMAN DETECTED!
+[2025-07-16 19:58:29.948 | Frame 44] Alert triggered: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:29.949 | Frame 44] Sound alert triggered: FIRE
+[2025-07-16 19:58:29.949 | Frame 44] Sound file not found: fire_alert.mp3
+[2025-07-16 19:58:30.483 | Frame 45] Detected HUMAN: Person 0.92 at [368,361,546,679] conf: 0.92
+[2025-07-16 19:58:30.483 | Frame 45] Detected HUMAN: Person 0.91 at [198,366,375,679] conf: 0.91
+[2025-07-16 19:58:30.483 | Frame 45] Detected VEHICLE: Car 0.89 at [832,492,1063,632] conf: 0.89
+[2025-07-16 19:58:30.483 | Frame 45] Detected VEHICLE: Car 0.89 at [1040,495,1213,632] conf: 0.89
+[2025-07-16 19:58:30.483 | Frame 45] Detected VEHICLE: Truck 0.88 at [591,451,839,639] conf: 0.88
+[2025-07-16 19:58:30.483 | Frame 45] Detected FIRE: FIRE 0.33 at [0,4,904,546] conf: 0.33
+[2025-07-16 19:58:31.046 | Frame 46] Detected HUMAN: Person 0.93 at [368,361,545,679] conf: 0.93
+[2025-07-16 19:58:31.046 | Frame 46] Detected HUMAN: Person 0.91 at [198,366,374,679] conf: 0.91
+[2025-07-16 19:58:31.046 | Frame 46] Detected VEHICLE: Car 0.90 at [1043,495,1213,633] conf: 0.90
+[2025-07-16 19:58:31.046 | Frame 46] Detected VEHICLE: Car 0.89 at [832,492,1063,632] conf: 0.89
+[2025-07-16 19:58:31.046 | Frame 46] Detected VEHICLE: Truck 0.86 at [592,452,839,638] conf: 0.86
+[2025-07-16 19:58:31.046 | Frame 46] Detected FIRE: FIRE 0.37 at [0,4,898,555] conf: 0.37
+[2025-07-16 19:58:31.593 | Frame 47] Detected HUMAN: Person 0.93 at [369,361,545,679] conf: 0.93
+[2025-07-16 19:58:31.593 | Frame 47] Detected HUMAN: Person 0.92 at [197,366,383,679] conf: 0.92
+[2025-07-16 19:58:31.593 | Frame 47] Detected VEHICLE: Car 0.90 at [832,492,1064,633] conf: 0.90
+[2025-07-16 19:58:31.593 | Frame 47] Detected VEHICLE: Car 0.89 at [1043,495,1213,630] conf: 0.89
+[2025-07-16 19:58:31.593 | Frame 47] Detected VEHICLE: Truck 0.87 at [592,451,840,638] conf: 0.87
+[2025-07-16 19:58:31.593 | Frame 47] Alert cleared: ALERT: FIRE DETECTED!
+[2025-07-16 19:58:31.593 | Frame 47] Alert triggered: ALERT: HUMAN DETECTED!
+[2025-07-16 19:58:31.593 | Frame 47] Sound alert triggered: HUMAN
+[2025-07-16 19:58:31.593 | Frame 47] Sound file not found: human_alert.mp3
+[2025-07-16 19:58:32.126 | Frame 48] Detected HUMAN: Person 0.93 at [368,360,545,678] conf: 0.93
+[2025-07-16 19:58:32.126 | Frame 48] Detected HUMAN: Person 0.93 at [197,366,385,679] conf: 0.93
+[2025-07-16 19:58:32.126 | Frame 48] Detected VEHICLE: Car 0.89 at [1043,495,1213,631] conf: 0.89
+[2025-07-16 19:58:32.126 | Frame 48] Detected VEHICLE: Car 0.89 at [832,492,1064,632] conf: 0.89
+[2025-07-16 19:58:32.126 | Frame 48] Detected VEHICLE: Truck 0.87 at [592,450,840,639] conf: 0.87
+[2025-07-16 19:58:32.684 | Frame 49] Detected HUMAN: Person 0.93 at [198,366,385,679] conf: 0.93
+[2025-07-16 19:58:32.684 | Frame 49] Detected HUMAN: Person 0.93 at [368,361,545,679] conf: 0.93
+[2025-07-16 19:58:32.684 | Frame 49] Detected VEHICLE: Car 0.89 at [1043,494,1213,630] conf: 0.89
+[2025-07-16 19:58:32.684 | Frame 49] Detected VEHICLE: Car 0.89 at [831,492,1065,632] conf: 0.89
+[2025-07-16 19:58:32.684 | Frame 49] Detected VEHICLE: Truck 0.83 at [592,448,840,638] conf: 0.83
+[2025-07-16 19:58:33.219 | Frame 50] Detected HUMAN: Person 0.93 at [368,360,544,679] conf: 0.93
+[2025-07-16 19:58:33.219 | Frame 50] Detected HUMAN: Person 0.93 at [198,365,386,679] conf: 0.93
+[2025-07-16 19:58:33.219 | Frame 50] Detected VEHICLE: Car 0.89 at [1043,494,1213,630] conf: 0.89
+[2025-07-16 19:58:33.219 | Frame 50] Detected VEHICLE: Car 0.88 at [831,492,1065,632] conf: 0.88
+[2025-07-16 19:58:33.219 | Frame 50] Detected VEHICLE: Truck 0.86 at [592,449,841,638] conf: 0.86
+[2025-07-16 19:58:33.926 | Frame 51] Detected HUMAN: Person 0.93 at [367,359,545,679] conf: 0.93
+[2025-07-16 19:58:33.926 | Frame 51] Detected HUMAN: Person 0.93 at [199,363,387,679] conf: 0.93
+[2025-07-16 19:58:33.926 | Frame 51] Detected VEHICLE: Car 0.89 at [1046,493,1213,629] conf: 0.89
+[2025-07-16 19:58:33.926 | Frame 51] Detected VEHICLE: Car 0.88 at [832,491,1066,630] conf: 0.88
+[2025-07-16 19:58:33.926 | Frame 51] Detected VEHICLE: Truck 0.87 at [593,449,841,639] conf: 0.87
+[2025-07-16 19:58:34.667 | Frame 52] Detected HUMAN: Person 0.93 at [367,359,545,679] conf: 0.93
+[2025-07-16 19:58:34.667 | Frame 52] Detected HUMAN: Person 0.93 at [199,363,387,679] conf: 0.93
+[2025-07-16 19:58:34.667 | Frame 52] Detected VEHICLE: Car 0.89 at [1046,493,1213,629] conf: 0.89
+[2025-07-16 19:58:34.667 | Frame 52] Detected VEHICLE: Car 0.88 at [832,491,1066,630] conf: 0.88
+[2025-07-16 19:58:34.667 | Frame 52] Detected VEHICLE: Truck 0.86 at [593,449,841,639] conf: 0.86
+[2025-07-16 19:58:35.433 | Frame 53] Detected HUMAN: Person 0.93 at [367,358,545,678] conf: 0.93
+[2025-07-16 19:58:35.434 | Frame 53] Detected HUMAN: Person 0.93 at [199,364,386,679] conf: 0.93
+[2025-07-16 19:58:35.435 | Frame 53] Detected VEHICLE: Car 0.89 at [1046,493,1213,629] conf: 0.89
+[2025-07-16 19:58:35.435 | Frame 53] Detected VEHICLE: Car 0.88 at [833,491,1065,631] conf: 0.88
+[2025-07-16 19:58:35.435 | Frame 53] Detected VEHICLE: Truck 0.87 at [593,448,841,638] conf: 0.87
+[2025-07-16 19:58:36.182 | Frame 54] Detected HUMAN: Person 0.93 at [367,358,544,679] conf: 0.93
+[2025-07-16 19:58:36.182 | Frame 54] Detected HUMAN: Person 0.92 at [199,364,387,680] conf: 0.92
+[2025-07-16 19:58:36.182 | Frame 54] Detected VEHICLE: Car 0.88 at [1046,492,1213,630] conf: 0.88
+[2025-07-16 19:58:36.182 | Frame 54] Detected VEHICLE: Car 0.88 at [830,490,1066,630] conf: 0.88
+[2025-07-16 19:58:36.182 | Frame 54] Detected VEHICLE: Truck 0.86 at [593,446,841,639] conf: 0.86

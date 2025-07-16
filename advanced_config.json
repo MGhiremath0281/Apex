@@ -3,49 +3,49 @@
     "1": [
       [
         320,
-        0
+        108
       ],
       [
-        484,
-        109
+        388,
+        157
       ],
       [
-        410,
-        334
+        362,
+        238
       ],
       [
-        205,
-        334
+        277,
+        238
       ],
       [
-        131,
-        109
+        251,
+        157
       ]
     ],
     "2": [
       [
-        1032,
+        1052,
         540
       ],
       [
-        996,
-        602
+        1006,
+        622
       ],
       [
-        924,
-        602
+        909,
+        622
       ],
       [
-        888,
+        863,
         540
       ],
       [
-        924,
-        477
+        909,
+        452
       ],
       [
-        996,
-        477
+        1006,
+        452
       ]
     ],
     "3": [
@@ -116,7 +116,7 @@
     "4": "PERIMETER"
   },
   "settings": {
-    "show_heatmap": true,
+    "show_heatmap": false,
     "show_analytics": false,
     "show_trails": true,
     "show_confidence": true,
@@ -125,16 +125,16 @@
     "alert_duration": 5.0
   },
   "statistics": {
-    "total_detections": 241,
-    "total_intrusions": 15,
+    "total_detections": 367,
+    "total_intrusions": 16,
     "zone_intrusions": {
       "1": 0,
-      "2": 15,
+      "2": 16,
       "3": 0,
       "4": 0
     },
     "class_detections": {
-      "person": 238,
+      "person": 367,
       "bicycle": 0,
       "car": 0,
       "motorcycle": 0,
@@ -142,7 +142,7 @@
       "truck": 0,
       "bird": 0,
       "cat": 0,
-      "dog": 3,
+      "dog": 0,
       "horse": 0,
       "sheep": 0,
       "cow": 0,
@@ -152,5 +152,5 @@
       "giraffe": 0
     }
   },
-  "timestamp": "2025-07-15T17:33:09.616701"
+  "timestamp": "2025-07-15T18:02:32.444163"
 }
